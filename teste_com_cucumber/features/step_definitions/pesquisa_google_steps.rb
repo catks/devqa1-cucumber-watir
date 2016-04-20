@@ -7,6 +7,7 @@ Quando(/^pesquiso por "([^"]*)"$/) do |texto|
   pesquisa = @browser.text_field(:name,'q')
   pesquisa.set(texto)
   pesquisa.send_keys :enter
+  sleep 2
 end
 
 Então(/^posso visualizar o resultado da busca$/) do
